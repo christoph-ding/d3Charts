@@ -1,0 +1,22 @@
+{
+"data": [
+  [{"axis": "hit points", "value": },
+   {"axis": "magic points", "value": }, 
+   {"axis": "wisdom", "value": },
+   {"axis": "strength", "value": },
+   {"axis": "agility", "value": },
+   {"axis": "charisma", "value": },
+   {"axis": "toughness", "value": }
+   {"axis": "dexterity", "value": }
+  ],
+  [{"axis": "hit points", "value": },
+   {"axis": "magic points", "value": }, 
+   {"axis": "wisdom", "value": },
+   {"axis": "strength", "value": },
+   {"axis": "agility", "value": },
+   {"axis": "charisma", "value": },
+   {"axis": "toughness", "value": }
+   {"axis": "dexterity", "value": }
+  ]  
+]
+}
