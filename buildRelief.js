@@ -72,11 +72,10 @@ function makeAxis (maximum, axisLabels, width, height) {
 }
 
 // Make rings 
-function makeRings (levels, axisLabels, width, height) {
-  
+function makeRings (levels, axisLabels, width, height) {  
   // this only makes a single ring right now
   // and the css is terrible
-  d3.select('#chart')
+  var ring = d3.select('#chart')
     .append('circle')    
     .attr("cx", width/2)
     .attr("cy", height/2)
@@ -84,11 +83,20 @@ function makeRings (levels, axisLabels, width, height) {
     .attr("height", height)
     .attr("r", height/4)
     .style("fill", '#grey')
-    .style("opacity", '0.2')
+    .style("opacity", '0.1')
+
+  // a label for the level
+  d3.select('#chart')
+    .append('text')
+    .text('50%')
+    .style("font-family", "sans-serif")
+    .style("font-size", "11px")
+    .attr("dy", "1.5em")
+    .attr("x", width/2)
+    .attr("y", height*0.25)
 }
 
 function buildRelief (maximum, axisLabels) {
-
   var width = 850;
   var height = 600;
 
