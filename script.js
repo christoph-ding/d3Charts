@@ -5,8 +5,7 @@ function createRadarChart () {
 
   // // create the canvas element, legend and axis
   var maximum = calculateChartBounds(dataSets.data);
-  console.log(maximum);
-  // var axisLabels = gatherAxisLabels();
+  var axisLabels = gatherAxisLabels(dataSets.data[0]);
   // require('./buildRelief.js').buildRelief(maximum, configurations['relief']);
 
   // // visualize the datasets on the chart
@@ -29,8 +28,16 @@ function calculateChartBounds (dataSets) {
 }
 
 function gatherAxisLabels(dataset) {
-  var labels = [];
-  return labels;
+  var labels = {};
+  for (var i = 0; i < dataset.length; i++) {
+    var attribute = dataset[i].axis;
+    console.log(attribute);
+    if (!(labels.hasOwnProperty(attribute))) {
+      labels[attribute] = true;
+    }
+  }
+
+  return Object.keys(labels);
 }
 
 // run the program
