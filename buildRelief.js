@@ -69,20 +69,23 @@ function makeAxis (maximum, axisLabels, width, height) {
     .attr("class", "line")
     .style("stroke", "grey")
     .style("stroke-width", "1px");
-
 }
 
 // Make rings 
-function makeRings (size) {
-
+function makeRings (levels, axisLabels, width, height) {
+  
+  // this only makes a single ring right now
+  // and the css is terrible
+  d3.select('#chart')
+    .append('circle')    
+    .attr("cx", width/2)
+    .attr("cy", height/2)
+    .attr("width", width)
+    .attr("height", height)
+    .attr("r", height/4)
+    .style("fill", '#grey')
+    .style("opacity", '0.2')
 }
-
-// build the entire relief - this is exposed
-  // call each with correct option
-
-// function buildRelief (maximum, options) {
-
-// }
 
 function buildRelief (maximum, axisLabels) {
 
@@ -92,5 +95,5 @@ function buildRelief (maximum, axisLabels) {
   console.log('building relief...');
   makeChart(width, height);
   makeAxis(maximum, axisLabels, width, height);
-  // makeRings();
+  makeRings(1, axisLabels, width, height);
 }
