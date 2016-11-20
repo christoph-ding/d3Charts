@@ -11,7 +11,11 @@ function createRadarChart () {
      {"axis": "agility", "value": 14},
      {"axis": "charisma", "value": 13},
      {"axis": "toughness", "value": 12},
-     {"axis": "dexterity", "value": 11}
+     {"axis": "dexterity", "value": 11},
+     {"axis": "cleverness", "value": 11},
+     {"axis": "money", "value": 11},
+     {"axis": "coolness", "value": 11},
+     {"axis": "awesomeness", "value": 11}
     ],
     [{"axis": "hit points", "value": 18},
      {"axis": "magic points", "value": 17}, 
@@ -20,7 +24,11 @@ function createRadarChart () {
      {"axis": "agility", "value": 14},
      {"axis": "charisma", "value": 13},
      {"axis": "toughness", "value": 12},
-     {"axis": "dexterity", "value": 11}
+     {"axis": "dexterity", "value": 11},
+     {"axis": "cleverness", "value": 11},
+     {"axis": "money", "value": 11},
+     {"axis": "coolness", "value": 11},
+     {"axis": "awesomeness", "value": 11}
     ]]
   };
 
@@ -30,9 +38,7 @@ function createRadarChart () {
   // // create the canvas element, legend and axis
   var maximum = calculateChartBounds(dataSets.data);
   var axisLabels = gatherAxisLabels(dataSets.data[0]);
-  // require('./buildRelief.js').buildRelief(maximum, configurations['relief']);
-  // require('./buildRelief.js').buildRelief(maximum);
-  buildRelief()
+  buildRelief(maximum, axisLabels)
 
   // // visualize the datasets on the chart
   // require('./chartSingleDataset.js').visualizeData(dataSets, configurations['data']);  
